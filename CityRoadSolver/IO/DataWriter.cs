@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.IO;
 
 namespace CityRoadSolver.IO
 {
@@ -10,7 +11,7 @@ namespace CityRoadSolver.IO
         {
             try
             {
-                System.IO.File.WriteAllText(Environment.CurrentDirectory + filename, ansver.ToString(CultureInfo.InvariantCulture));
+                File.WriteAllText(Environment.CurrentDirectory + filename, ansver.ToString(CultureInfo.InvariantCulture));
             }
             catch (Exception e)
             {

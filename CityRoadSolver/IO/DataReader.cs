@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace CityRoadSolver.IO
@@ -13,7 +14,7 @@ namespace CityRoadSolver.IO
         {
             try
             {
-                lines = System.IO.File.ReadAllLines(Environment.CurrentDirectory + filename);
+                lines = File.ReadAllLines(Environment.CurrentDirectory + filename);
             }
             catch (Exception e)
             {
