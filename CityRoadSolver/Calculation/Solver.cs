@@ -15,22 +15,25 @@ namespace CityRoadSolver.Calculation
 
         float ISolver.SolveBestPath(Data inputData)
         {
+            //возвращаем значения для работы в исходный вид, если кто то догадается выполнить несколько операций с одним инстансом.
             data = inputData;
             bestPathCost = float.MaxValue;
+            currentPathCost = 0;
             nodes.Clear();
+            usedInResolvingNodes.Clear();
             targetCity = data.TargetCities[1];
 
-            //TODO: realize calculation
-
-            //create nodes
+            //Создаем ноды
             nodes = CollectNodes(inputData);
 
-            //force all path variations with cost calculation
             var startNode = nodes[inputData.TargetCities[0]];
 
             usedInResolvingNodes.Add(startNode);
+
+            //call recursiv
             RecursivelySolveNode(startNode);
 
+            //
             if (Math.Abs(bestPathCost - float.MaxValue) < 0.0001f)
             {
                 Console.WriteLine("cannot find any path between target cities");
@@ -82,12 +85,14 @@ namespace CityRoadSolver.Calculation
 
             foreach (var connectedNode in node.ConnectedNodes)
             {
-                if (connectedNode.Value + currentPathCost > bestPathCost) //отбрасываем пути превышающие текущий лучший вариант
+                //отбрасываем пути превышающие текущий лучший вариант
+                if (connectedNode.Value + currentPathCost > bestPathCost) 
                 {
                     continue;
                 }
 
-                if (usedInResolvingNodes.Contains(nodes[connectedNode.Key])) //отбрасываем пути если узел уже использовался раньше в этом пути. Ликвидация циклов.
+                //отбрасываем пути если узел уже использовался раньше в этом пути. Ликвидация циклов.
+                if (usedInResolvingNodes.Contains(nodes[connectedNode.Key])) 
                 {
                     continue;
                 }
