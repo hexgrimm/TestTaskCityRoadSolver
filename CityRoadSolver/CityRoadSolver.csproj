@@ -45,6 +45,7 @@
     <Compile Include="IO\Data.cs" />
     <Compile Include="IO\DataReader.cs" />
     <Compile Include="IO\IDataReader.cs" />
+    <Compile Include="IO\IDataWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

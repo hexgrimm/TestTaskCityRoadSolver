@@ -62,7 +62,7 @@ namespace CityRoadSolver.IO
             }
 
             output.CityNames = new[] {rawStrings[0], rawStrings[1]};
-            output.FuelCost = int.Parse(rawStrings[2]);
+            output.FuelCost = float.Parse(rawStrings[2]);
 
             return output;
         }

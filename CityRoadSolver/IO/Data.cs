@@ -10,7 +10,7 @@ namespace CityRoadSolver.IO
     {
         public struct RoadInfo
         {
-            public int FuelCost;
+            public float FuelCost;
             public string[] CityNames;
         }
 
