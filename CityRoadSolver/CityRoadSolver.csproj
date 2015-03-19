@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculation\ISolver.cs" />
+    <Compile Include="Calculation\Node.cs" />
+    <Compile Include="Calculation\Solver.cs" />
     <Compile Include="IO\Data.cs" />
     <Compile Include="IO\DataReader.cs" />
     <Compile Include="IO\DataWriter.cs" />
