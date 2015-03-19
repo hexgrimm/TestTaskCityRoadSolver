@@ -4,14 +4,15 @@ namespace CityRoadSolver.Calculation
 {
     public interface ISolver
     {
-        int SolveBestPath(Data data);
+        float SolveBestPath(Data data);
     }
 
     public sealed class Solver : ISolver
     {
-        int ISolver.SolveBestPath(Data data)
+        float ISolver.SolveBestPath(Data data)
         {
-            return 0;
+            //TODO: realize calculation
+            return 0f;
         }
     }
 }
