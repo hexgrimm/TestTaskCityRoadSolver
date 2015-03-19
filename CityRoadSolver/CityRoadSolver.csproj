@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculation\ISolver.cs" />
     <Compile Include="IO\Data.cs" />
     <Compile Include="IO\DataReader.cs" />
     <Compile Include="IO\IDataReader.cs" />
