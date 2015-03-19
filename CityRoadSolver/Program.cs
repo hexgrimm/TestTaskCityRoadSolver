@@ -13,7 +13,6 @@ namespace CityRoadSolver
             IDataWriter writer = new DataWriter();
 
             writer.WriteAnsverToFile(solver.SolveBestPath(dataReader.ReadInputData()));
-            Console.ReadLine();
         }
     }
 }
