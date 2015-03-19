@@ -48,7 +48,7 @@ namespace CityRoadSolver.Calculation
             var collectedNodes = new Dictionary<string, Node>();
             foreach (var road in input.Roads)
             {
-                if (collectedNodes.ContainsKey(road.CityNames[0]))
+                if (collectedNodes.ContainsKey(road.CityNames[0])) //TODO: запилить вместо дубликатов что нибудь поадекватнее
                 {
                     collectedNodes[road.CityNames[0]].ConnectedNodes.Add(road.CityNames[1], road.FuelCost);
                 }
